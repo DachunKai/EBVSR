@@ -59,7 +59,7 @@ Download the pretrained model from this [link](https://drive.google.com/drive/fo
 ```
 
 ### Contact
-Should you have any questions, please feel free to contact dachunkai@mail.ustc.edu.cn.
+If you have any questions, please feel free to contact dachunkai@mail.ustc.edu.cn.
 
 
 ### License and Acknowledgement
