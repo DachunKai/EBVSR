@@ -10,8 +10,9 @@
 ### Network Architecture
 
 See [EBVSR_arch.py](basicsr/archs/ebvsr_arch.py).
-
-<img src="asserts/framework.png" alt="arch" style="zoom:30%;" />
+<details><summary>Framework (Click to expand) </summary>
+<img src="asserts/framework.png" alt="framework" style="zoom:30%;" />
+</details>
 
 ### Results
 <details><summary>Vid4 dataset (Click to expand) </summary>
