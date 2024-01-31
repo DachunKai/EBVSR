@@ -1,0 +1,42 @@
+name: EBVSR_CED_BIx2
+model_type: E2VSRModel
+scale: 4
+num_gpu: auto
+manual_seed: 0
+
+datasets:
+  test:
+    name: CED4
+    type: CED4WithEventsTestDataset
+    dataroot_gt: datasets/CED_h5/HR/test
+    dataroot_lq: datasets/CED_h5/LRx2/test
+    meta_info_file: basicsr/data/meta_info/meta_info_CED_h5_test.txt
+    io_backend:
+      type: hdf5
+
+# network structures
+network_g:
+  type: EBVSR_2x
+  num_feat: 64
+  num_block: 30
+
+# path
+path:
+  pretrain_network_g: experiments/pretrained_models/EBVSR/EBVSR_CED_BIx2.pth
+  strict_load_g: true
+
+# validation settings
+val:
+  save_img: true
+  flip_seq: false
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: false
